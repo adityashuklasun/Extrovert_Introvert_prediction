@@ -21,10 +21,11 @@ function Model() {
       [name]: value,
     }));
   };
+const API_URL = "https://extrovert-introvert-prediction-4.onrender.com/api/predict";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/api/predict", {
+    const res = await fetch( API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
